@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Secular+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    display: grid;
+    background-color: #B8D0EB;
+    font-family: 'Comfortaa', cursive;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    "header "
+                            "nav"
+                            "main"
+                            "footer";
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.box-area{
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 8s linear infinite;
+}
+
+
+.box-area li:nth-child(2){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 10s linear infinite;
+}
+.box-area li:nth-child(3){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 10vh;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 17s linear infinite;
+}
+.box-area li:nth-child(4){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 5vh;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 15s linear infinite;
+}
+.box-area li:nth-child(5){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 2vh;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 5s linear infinite;
+}
+.box-area li:nth-child(6){
+    position: relative;
+    display: block;
+    list-style-type: #011638;
+    width: 25px;
+    top: 7vh;
+    height: 25px;
+    background-color: #011638;
+    animation: animate 22s linear infinite;
+}
+.box-area li:nth-child(7){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 13vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 18s linear infinite;
+}
+.box-area li:nth-child(8){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 2vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 11s linear infinite;
+}
+.box-area li:nth-child(9){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 19vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 5s linear infinite;
+}
+.box-area li:nth-child(10){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 14vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 5s linear infinite;
+}
+.box-area li:nth-child(11){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 22vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 5s linear infinite;
+}
+.box-area li:nth-child(12){
+    position: relative;
+    display: block;
+    list-style-type: none;
+    width: 25px;
+    top: 25vh;
+    height: 25px;
+    background-color: pink;
+    animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(90vw);
+        opacity: 1;
+    }
+}
+
+
+
+
+header{
+    grid-area: header;
+    background-color: #011638;
+    color: rgba(240,255,255,100);
+    font-family: 'Comfortaa', cursive;
+}
+
+header h1 {
+    float: left;
+    font-size: 1.5em;
+    position: relative;
+   top: 5px;
+}
+
+header a:any-link{
+    color: #B8D0EB;
+    text-decoration: none;
+}
+
+
+#hamburger{
+    position: relative;
+    font-size: 2em;
+   
+    text-decoration: none;
+    font-weight: bolder; 
+    color: #B8D0EB;
+    float: right;
+    right: 3vw;
+    top: 5px;
+}
+#hamburger a:any-link{
+    color: #B8D0EB;
+}
+.shownav{
+    content: url(burgericon.png);
+    width: 15vw;
+    position: relative;
+    float: right;
+    filter: invert(100);
+    top: 2px;
+}
+
+#shownav:link{
+    color: purple;
+}
+/*When "an item" is clicked - show the menu */
+#clicked .on{display: block;}
+/*when its clicked again remove it */
+#clicked .off {display: none;
+}
+
+#clicked:target .on {display: none;
+}
+#clicked:target .off {display: block;}
+/* Target the nav - so the nav turns on an off*/
+#clicked:target nav {display: none;}
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-back {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-250px);
+    }
+}
+nav{
+    grid-area: nav;
+    background-color: #011638;;
+    display: block;
+    top: 0;
+    position:fixed;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    animation: slide-in 1s ease 0s 1 normal none slide-back;
+    
+    
+}
+
+.navlist a:any-link{
+    color: #B8D0EB;
+    text-decoration: none;
+    
+}
+
+.navlist ul li{
+    padding-top: 50px;
+    color: aliceblue;
+
+}
+
+.navlist p {
+    color: white;
+}
+
+
+main{
+    grid-area: main;
+}
+
+.maintext{
+  
+   font-family: 'Secular One', sans-serif;
+   position: relative;
+   top: 20vh;
+   
+}
+.maintext span{
+    color: white;
+    background-color: #011638;
+    border-radius: 10%; 
+}
+
+.maintext a {
+    text-decoration: none;
+}
+.maintext p:nth-child(1){
+    font-size: 2em;
+    
+    color: white;
+    
+}
+
+.maintext p:nth-child(2){
+    color: white;
+    border: 2px solid transparent;
+    width: 80%;
+ 
+}
+.container{
+    position: relative;
+    float: right;
+    left: 2vw;
+    list-style-type: none;
+}
+.container ul {
+    list-style-type: none;
+}
+#linkedin {
+    width: 10vw;
+    background-color: rgb(194, 194, 3);
+    filter: invert(100);
+    padding: 10px;
+    border-radius: 30%;
+}
+.linkedin p {
+    visibility: hidden;
+}
+#instagram {
+    width: 10vw;
+    background-color: rgb(194, 194, 3);
+    filter: invert(100);
+    padding: 10px;
+    border-radius: 30%;
+}
+.instagram p {
+    visibility: hidden;
+}
+#github {
+    width: 10vw;
+    
+    background-color: rgb(194, 194, 3);
+    filter: invert(100);
+    padding: 10px;
+    border-radius: 30%;
+}
+.me p {
+    visibility: hidden;
+}
+.gridbox1 a:any-link{
+    text-decoration: none;
+    color: blue;
+}
+.gridbox1 p:nth-child(1)
+{
+    font-size: 2vh;
+    color: blue;
+    background-color: white;
+    width: 50vw;
+    position: relative;
+    text-align: center;
+    
+}
+
+.blog_text p:nth-child(1)
+{
+    display: flex;
+    background-color: white;
+    width: fit-content;
+    position: relative;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog_text ul {
+    background-color: white;
+}
+#headshot {
+    position: relative;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+
+}
+
+.footertext ul li{
+    display: inline-flex;
+    list-style-type: none;
+    padding-right: 20px; 
+    position: relative;
+   float: left;
+}
+#javascript{
+    width: 8vw;
+}
+#java{
+    width: 3vw;
+}
+#mysql{
+    width: 7vw;
+}
+#css{
+    width: 6vw;
+}
+#html{
+    width: 5vw;
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: #011638;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100vw;
+    padding-top: 5px;
+}
